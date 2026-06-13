@@ -1,0 +1,52 @@
+.offices-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+@media (max-width: 800px) {
+  .offices-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.office-city-label {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #c9a84c;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.18);
+}
+.office-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: #101318;
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  padding: 20px 22px;
+  margin-bottom: 12px;
+  transition: border-color 0.3s;
+}
+.office-card:hover {
+  border-color: rgba(201, 168, 76, 0.35);
+}
+.office-icon {
+  font-size: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.office-addr {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+.office-ph {
+  font-size: 13px;
+  color: #c9a84c;
+  text-decoration: none;
+}
+.office-ph:hover {
+  color: #e5c97a;
+}

@@ -1,0 +1,113 @@
+.rera-section {
+  padding: 100px 0;
+  background: #0d0f14;
+  position: relative;
+  overflow: hidden;
+}
+.rera-bg-accent {
+  position: absolute;
+  bottom: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.rera-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 70px;
+}
+@media (max-width: 900px) {
+  .rera-top {
+    grid-template-columns: 1fr;
+  }
+}
+.rera-counter-box {
+  background: linear-gradient(135deg, #131720, #181d27);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  padding: 40px;
+  text-align: center;
+  min-width: 280px;
+  box-shadow: 0 0 40px rgba(201, 168, 76, 0.06);
+}
+.rera-big-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 88px;
+  font-weight: 600;
+  line-height: 1;
+  color: #fff;
+}
+.rera-big-lbl {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 10px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+.rera-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  justify-content: center;
+}
+.rera-city-tag {
+  padding: 4px 12px;
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #c9a84c;
+  background: rgba(201, 168, 76, 0.05);
+  text-transform: uppercase;
+}
+.rera-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+@media (max-width: 900px) {
+  .rera-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .rera-steps {
+    grid-template-columns: 1fr;
+  }
+}
+.rera-step {
+  padding: 32px 24px;
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-left: none;
+}
+.rera-step:first-child {
+  border-left: 1px solid rgba(201, 168, 76, 0.1);
+}
+.rera-step-num {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 42px;
+  color: rgba(201, 168, 76, 0.18);
+  font-weight: 600;
+  line-height: 1;
+}
+.rera-step-line {
+  width: 40px;
+  height: 2px;
+  background: #c9a84c;
+  margin: 14px 0;
+}
+.rera-step-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e5c97a;
+  margin-bottom: 10px;
+}
+.rera-step-desc {
+  font-size: 13px;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.52);
+}

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: #0d0f14;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1280px, 92%);
+  margin: 0 auto;
+}
+.section {
+  padding: 100px 0;
+}
+.section--alt {
+  background: #101318;
+}
+.section-header-center {
+  margin-bottom: 60px;
+}
+
+/* ── TYPOGRAPHY ── */
+.section-h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #fff;
+}
+.body-text {
+  font-size: 15px;
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* ── GOLD LINE / TAG ── */
+.gold-line {
+  width: 52px;
+  height: 2px;
+  background: linear-gradient(90deg, #c9a84c, #e5c97a);
+  margin: 18px 0 0;
+}
+.gold-line--centre {
+  margin: 18px auto 0;
+}
+.tag {
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #c9a84c;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+  background: linear-gradient(135deg, #c9a84c, #e5c97a);
+  color: #0d0f14;
+  border: none;
+  padding: 14px 34px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: opacity 0.2s, transform 0.2s;
+  border-radius: 2px;
+}
+.btn-primary:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.45);
+  color: #c9a84c;
+  padding: 14px 34px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s;
+  border-radius: 2px;
+}
+.btn-outline:hover {
+  background: rgba(201, 168, 76, 0.1);
+  border-color: #c9a84c;
+}
+
+/* ── CREDENTIALS STRIP ── */
+.cred-strip {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(201, 168, 76, 0.12);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+  background: #101318;
+}
+.cred-item {
+  flex: 1;
+  min-width: 160px;
+  padding: 20px 24px;
+  border-right: 1px solid rgba(201, 168, 76, 0.1);
+  text-align: center;
+}
+.cred-item:last-child {
+  border-right: none;
+}
+.cred-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #c9a84c;
+  letter-spacing: 0.5px;
+}
+.cred-sub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 4px;
+}
