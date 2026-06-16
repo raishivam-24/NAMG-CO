@@ -48,7 +48,9 @@
 .service-icon-img {
   width: 100%;
   height: 160px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;
   border-radius: 6px;
   margin-bottom: 20px;
+  padding: 8px;
 }
