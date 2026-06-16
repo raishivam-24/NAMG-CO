@@ -17,7 +17,7 @@ export default function Hero({ scrollTo }) {
       <div className="hero-firm-row">
         <div className="hero-ca-seal">
           <div className="seal-outer">
-            <div className="seal-inner">CA</div>
+            <img src="/logo.png" alt="CA India Logo" className="seal-logo" />
           </div>
         </div>
       </div>

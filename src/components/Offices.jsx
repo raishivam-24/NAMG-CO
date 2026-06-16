@@ -19,15 +19,17 @@ export default function Offices() {
             <div key={o.city} className="office-city-block">
               <div className="office-city-label">{o.city}</div>
               {o.offices.map((off, i) => (
-                <div key={i} className="office-card">
+                <a key={i} href={"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(off.addr)} target="_blank" rel="noopener noreferrer" className="office-card">
                   <div className="office-icon">📍</div>
                   <div>
                     <div className="office-addr">{off.addr}</div>
-                    <a href={`tel:${off.ph}`} className="office-ph">
-                      📞 {off.ph}
-                    </a>
+                    <span className="office-ph" onClick={(e) => e.stopPropagation()}>
+                      <a href={`tel:${off.ph}`} className="office-ph-link">
+                        📞 {off.ph}
+                      </a>
+                    </span>
                   </div>
-                </div>
+                </a>
               ))}
             </div>
           ))}
@@ -35,4 +37,4 @@ export default function Offices() {
       </div>
     </section>
   );
-}
+}``

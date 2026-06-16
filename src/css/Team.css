@@ -103,3 +103,10 @@
 .team-contact-link:hover {
   color: #c9a84c;
 }
+.team-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(201, 168, 76, 0.45);
+}

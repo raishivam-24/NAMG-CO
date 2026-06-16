@@ -37,6 +37,13 @@
   font-family: "Inter", sans-serif;
   box-shadow: 0 0 16px rgba(192, 57, 43, 0.35);
 }
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+}
 .brand-name {
   font-family: "Cormorant Garamond", serif;
   font-size: 17px;

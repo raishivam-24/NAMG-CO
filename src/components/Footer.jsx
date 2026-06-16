@@ -9,9 +9,7 @@ export default function Footer({ scrollTo }) {
         <div className="footer-grid">
           <div>
             <div className="footer-brand">
-              <div className="brand-badge" style={{ width: 36, height: 36, fontSize: 12 }}>
-                CA
-              </div>
+              <img src="/logo.png" alt="CA India Logo" className="brand-logo" style={{ width: 36, height: 36 }} />
               <div>
                 <div className="brand-name">NAMG &amp; CO.</div>
                 <div className="brand-sub">Chartered Accountants</div>

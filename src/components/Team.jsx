@@ -18,7 +18,11 @@ export default function Team() {
           {TEAM.map((m) => (
             <div key={m.name} className="team-card">
               <div className="team-avatar">
-                <div className="team-initials">{m.initials}</div>
+                {m.photo ? (
+                  <img src={m.photo} alt={m.name} className="team-photo" />
+                ) : (
+                  <div className="team-initials">{m.initials}</div>
+                )}
                 <div className="team-avatar-ring" />
               </div>
               <h3 className="team-name">{m.name}</h3>
@@ -33,6 +37,11 @@ export default function Team() {
                 <a href={`tel:${m.mobile}`} className="team-contact-link">
                   📞 {m.mobile}
                 </a>
+                {m.linkedin && (
+                <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="team-contact-link">
+                  💼 LinkedIn
+                </a>
+                )}
               </div>
             </div>
           ))}

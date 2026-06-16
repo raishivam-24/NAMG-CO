@@ -6,7 +6,7 @@ export default function Navbar({ activeNav, scrolled, menuOpen, setMenuOpen, scr
     <>
       <nav className="navbar" style={{ background: scrolled ? "rgba(13,15,20,0.97)" : "transparent" }}>
         <div className="nav-brand" onClick={() => scrollTo("Home")}>
-          <div className="brand-badge">CA</div>
+          <img src="/logo.png" alt="CA India Logo" className="brand-logo" />
           <div>
             <div className="brand-name">NAMG &amp; CO.</div>
             <div className="brand-sub">Chartered Accountants</div>

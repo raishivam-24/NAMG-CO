@@ -20,7 +20,11 @@ export default function Services() {
         <div className="services-grid">
           {SERVICES.map((s) => (
             <div key={s.title} className="service-card">
-              <div className="service-icon">{s.icon}</div>
+              {s.icon.startsWith("/") ? (
+                <img src={s.icon} alt={s.title} className="service-icon-img" />
+              ) : (
+                <div className="service-icon">{s.icon}</div>
+              )}
               <h3 className="service-title">{s.title}</h3>
               <p className="service-desc">{s.desc}</p>
             </div>

@@ -76,18 +76,12 @@
   box-shadow: 0 0 30px rgba(201, 168, 76, 0.12);
   animation: pulse-seal 3s ease-in-out infinite;
 }
-.seal-inner {
+.seal-logo {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #8b0000, #c0392b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 800;
-  color: #fff;
-  font-family: "Inter", sans-serif;
+  object-fit: cover;
+  background: #fff;
 }
 @keyframes pulse-seal {
   0%,

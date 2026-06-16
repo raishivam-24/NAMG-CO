@@ -21,52 +21,52 @@ export const CREDENTIALS = [
 
 export const SERVICES = [
   {
-    icon: "📋",
+    icon: "/services/gst-advisory.png",
     title: "GST Advisory & Litigations",
     desc: "Expert guidance on Goods & Services Tax compliance, refunds, departmental audits, and appellate proceedings.",
   },
   {
-    icon: "💰",
+    icon: "/services/income-tax.png",
     title: "Income Tax Services",
     desc: "Comprehensive advisory, litigation support, audits, and strategic tax planning solutions.",
   },
   {
-    icon: "⚖️",
+    icon: "/services/regulatory-compliances.png",
     title: "Regulatory & Compliances",
     desc: "Ensuring full adherence to statutory requirements across all regulatory frameworks.",
   },
   {
-    icon: "🤝",
+    icon: "/services/transaction-advisory.png",
     title: "Transaction Advisory",
     desc: "Strategic guidance for mergers, acquisitions, and complex business transactions.",
   },
   {
-    icon: "🔍",
+    icon: "/services/audit-assurance.png",
     title: "Audit & Assurance",
     desc: "Statutory audits, internal audits, bank audits, and specialised audit services.",
   },
   {
-    icon: "🏦",
+    icon: "/services/corporate-finance.png",
     title: "Corporate Finance",
     desc: "Project finance, financial modelling, and comprehensive corporate financing solutions.",
   },
   {
-    icon: "📊",
+    icon: "/services/securities-valuation.png",
     title: "Securities & Financial Assets Valuation",
     desc: "Merger and equity valuations, start-up and hedge-fund valuations, DCF and buyback valuations, financial modelling expertise.",
   },
   {
-    icon: "🏛️",
+    icon: "/services/corporate-law.png",
     title: "Corporate Law",
     desc: "Company formation and structuring, corporate governance advisory, and legal compliance management.",
   },
   {
-    icon: "🎓",
+    icon: "/services/corporate-training.png",
     title: "Corporate Training",
     desc: "GST and Income Tax workshops, CPE training sessions for professionals, and industry-specific knowledge sessions.",
   },
   {
-    icon: "💼",
+    icon: "/services/virtual-cfo.png",
     title: "Virtual CFO Services",
     desc: "Strategic financial management, MIS and reporting systems, cash flow and budgeting support.",
   },
@@ -107,7 +107,8 @@ export const TEAM = [
       "Leading expert in tax litigation, GST advisory, and securities valuation. Regular contributor to ICAI journals and conducts CPE training for professional institutes. Specialises in appellate proceedings, departmental audits, and complex financial modelling.",
     email: "nitin@namg.in",
     mobile: "8770132482",
-    initials: "NG",
+    photo: "/team/nitin-goyal.jpg",
+    linkedin: "https://www.linkedin.com/in/nitin-goyal-423997b8/?skipRedirect=true"
   },
   {
     name: "CA Aniket Goel",
@@ -118,7 +119,8 @@ export const TEAM = [
       "Over a decade of experience in taxation and strategic advisory. Leads practice areas in Indirect Taxation, Foreign Trade Policy, Project Finance, Virtual CFO services, and Mergers & Acquisitions. Passionate about driving value-added strategies for business growth and financial efficiency.",
     email: "aniket@namg.in",
     mobile: "90211-85551",
-    initials: "AG",
+    photo: "/team/aniket-goel.jpg",
+    linkedin: "https://www.linkedin.com/in/ca-aniket-mahendra-goel-9661925b/",
   },
   {
     name: "CA Ankit Goyal",
@@ -129,7 +131,8 @@ export const TEAM = [
       "Spearheads the firm's RERA practice with over 95 successful project registrations across Chhattisgarh. Expert in statutory audits, bank audits, business setup, and finance syndication. Manages the Bilaspur office and specialises in economic feasibility studies and project report preparation.",
     email: "ankit@namg.in",
     mobile: "98065-09694",
-    initials: "AK",
+    photo: "/team/ankit-goyal.jpg",
+    linkedin: "https://www.linkedin.com/in/ca-ankit-goyal-80691977/",
   },
   {
     name: "CA Aditi Agrawal",
