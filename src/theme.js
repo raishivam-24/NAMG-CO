@@ -1,17 +1,22 @@
 /* ═══════════════════════════════════════════
-   DESIGN TOKENS — pulled directly from PDF palette
-   Dark navy bg · warm gold accent · white text · red badge
+   DESIGN TOKENS — light "ledger paper" theme
+   Ivory bg · warm gold accent · deep ink text · red badge
 ═══════════════════════════════════════════ */
 export const T = {
-  bg: "#0D0F14",
-  bgCard: "#131720",
-  bgCardAlt: "#181D27",
-  border: "rgba(201,168,76,0.18)",
-  gold: "#C9A84C",
-  goldLight: "#E5C97A",
-  goldFade: "rgba(201,168,76,0.10)",
-  red: "#C0392B",
-  white: "#FFFFFF",
-  muted: "rgba(255,255,255,0.55)",
-  dim: "rgba(255,255,255,0.30)",
+  bg: "#F6F3EA",
+  bgCard: "#FFFFFF",
+  bgCardAlt: "#EFE9D8",
+  border: "rgba(154,116,32,0.22)",
+  gold: "#9A7420",
+  goldLight: "#C9A84C",
+  goldFade: "rgba(154,116,32,0.08)",
+  red: "#B23A2A",
+  ink: "#1B1E27",
+  white: "#1B1E27",
+  muted: "rgba(27,30,39,0.62)",
+  dim: "rgba(27,30,39,0.38)",
+
+  /* footer stays dark for contrast/anchor */
+  footerBg: "#12141B",
+  footerText: "rgba(255,255,255,0.55)",
 };

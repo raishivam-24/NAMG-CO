@@ -26,8 +26,8 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(201, 168, 76, 0.1);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: rgba(154, 116, 32, 0.08);
+  border: 1px solid rgba(154, 116, 32, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,21 +37,21 @@
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(27, 30, 39, 0.45);
 }
 .contact-info-val {
   font-size: 15px;
-  color: #c9a84c;
+  color: #9a7420;
   text-decoration: none;
   margin-top: 4px;
   display: block;
 }
 .contact-info-val:hover {
-  color: #e5c97a;
+  color: #7c5e19;
 }
 .contact-form {
-  background: #131720;
-  border: 1px solid rgba(201, 168, 76, 0.14);
+  background: #fff;
+  border: 1px solid rgba(154, 116, 32, 0.18);
   padding: 40px;
 }
 .form-row {
@@ -75,12 +75,12 @@
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(27, 30, 39, 0.5);
 }
 .form-input {
-  background: #0d0f14;
-  border: 1px solid rgba(201, 168, 76, 0.18);
-  color: #fff;
+  background: #f6f3ea;
+  border: 1px solid rgba(154, 116, 32, 0.22);
+  color: #1b1e27;
   padding: 12px 16px;
   font-size: 14px;
   font-family: "Inter", sans-serif;
@@ -88,19 +88,39 @@
   transition: border-color 0.2s;
   border-radius: 2px;
 }
+.form-input::placeholder {
+  color: rgba(27, 30, 39, 0.35);
+}
 .form-input:focus {
-  border-color: #c9a84c;
+  border-color: #9a7420;
 }
 .form-textarea {
   resize: vertical;
   min-height: 120px;
 }
 select.form-input option {
-  background: #131720;
+  background: #fff;
+}
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+.form-actions .btn-primary,
+.form-actions .btn-whatsapp {
+  flex: 1;
+  min-width: 180px;
+  justify-content: center;
+}
+.form-hint {
+  font-size: 11px;
+  color: rgba(27, 30, 39, 0.4);
+  margin-top: 10px;
 }
 .form-success {
-  background: #131720;
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: #fff;
+  border: 1px solid rgba(154, 116, 32, 0.25);
   padding: 60px 40px;
   text-align: center;
 }
@@ -108,12 +128,12 @@ select.form-input option {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(201, 168, 76, 0.12);
-  border: 2px solid #c9a84c;
+  background: rgba(154, 116, 32, 0.1);
+  border: 2px solid #9a7420;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 28px;
-  color: #c9a84c;
+  color: #9a7420;
   margin: 0 auto 20px;
 }

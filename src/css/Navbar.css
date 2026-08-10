@@ -11,7 +11,7 @@
   padding: 0 40px;
   height: 70px;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  border-bottom: 1px solid rgba(154, 116, 32, 0.14);
   transition: background 0.3s;
 }
 .nav-brand {
@@ -21,6 +21,7 @@
   cursor: pointer;
   flex-shrink: 0;
   text-decoration: none;
+  margin-right: auto;
 }
 .brand-badge {
   width: 42px;
@@ -48,7 +49,7 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 17px;
   font-weight: 600;
-  color: #fff;
+  color: #1b1e27;
   line-height: 1;
   letter-spacing: 1px;
 }
@@ -56,19 +57,18 @@
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(201, 168, 76, 0.75);
+  color: rgba(154, 116, 32, 0.85);
   margin-top: 3px;
 }
 .nav-links-desktop {
   display: flex;
   gap: 4px;
-  margin-left: auto;
 }
 .nav-link {
   background: none;
   border: none;
   cursor: pointer;
-  color: rgba(255, 255, 255, 0.62);
+  color: rgba(27, 30, 39, 0.68);
   font-size: 13px;
   letter-spacing: 0.5px;
   padding: 8px 14px;
@@ -78,15 +78,15 @@
   font-weight: 500;
 }
 .nav-link:hover {
-  color: #c9a84c;
+  color: #9a7420;
 }
 .nav-link--active {
-  color: #c9a84c;
-  border-bottom: 1px solid #c9a84c;
+  color: #9a7420;
+  border-bottom: 1px solid #9a7420;
 }
 .nav-cta {
-  background: linear-gradient(135deg, #c9a84c, #e5c97a);
-  color: #0d0f14;
+  background: linear-gradient(135deg, #9a7420, #c9a84c);
+  color: #fff;
   border: none;
   padding: 9px 22px;
   font-size: 12px;
@@ -107,7 +107,7 @@
   display: none;
   background: none;
   border: none;
-  color: #c9a84c;
+  color: #9a7420;
   font-size: 26px;
   line-height: 1;
   cursor: pointer;
@@ -137,26 +137,26 @@
   left: 0;
   right: 0;
   z-index: 999;
-  background: rgba(13, 15, 20, 0.98);
+  background: rgba(246, 243, 234, 0.98);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  border-bottom: 1px solid rgba(154, 116, 32, 0.16);
 }
 .mobile-link {
   background: none;
   border: none;
   text-align: left;
   padding: 14px 0;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(27, 30, 39, 0.8);
   font-size: 16px;
   cursor: pointer;
-  border-bottom: 1px solid rgba(201, 168, 76, 0.08);
+  border-bottom: 1px solid rgba(154, 116, 32, 0.1);
   font-family: "Inter", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 .mobile-link:hover {
-  color: #c9a84c;
+  color: #9a7420;
 }

@@ -4,7 +4,7 @@ import { NAV_LINKS } from "../data/siteData";
 export default function Navbar({ activeNav, scrolled, menuOpen, setMenuOpen, scrollTo }) {
   return (
     <>
-      <nav className="navbar" style={{ background: scrolled ? "rgba(13,15,20,0.97)" : "transparent" }}>
+      <nav className="navbar" style={{ background: scrolled ? "rgba(246,243,234,0.97)" : "transparent" }}>
         <div className="nav-brand" onClick={() => scrollTo("Home")}>
           <img src="/logo.png" alt="CA India Logo" className="brand-logo" />
           <div>

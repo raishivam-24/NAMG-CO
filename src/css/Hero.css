@@ -8,13 +8,14 @@
   padding: 100px 24px 60px;
   position: relative;
   overflow: hidden;
+  background: #f6f3ea;
 }
 .hero-bg-grid {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: linear-gradient(rgba(201, 168, 76, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 168, 76, 0.04) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(154, 116, 32, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(154, 116, 32, 0.06) 1px, transparent 1px);
   background-size: 60px 60px;
 }
 .hero-glow {
@@ -25,7 +26,7 @@
   width: 800px;
   height: 800px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(201, 168, 76, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(154, 116, 32, 0.12) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -40,19 +41,19 @@
 }
 .hero-badge {
   padding: 5px 14px;
-  border: 1px solid rgba(201, 168, 76, 0.35);
+  border: 1px solid rgba(154, 116, 32, 0.4);
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #c9a84c;
+  color: #9a7420;
   font-weight: 600;
-  background: rgba(201, 168, 76, 0.06);
+  background: rgba(154, 116, 32, 0.07);
   border-radius: 2px;
 }
 .hero-badge--red {
-  border-color: rgba(192, 57, 43, 0.5);
-  color: #e05a4a;
-  background: rgba(192, 57, 43, 0.08);
+  border-color: rgba(178, 58, 42, 0.5);
+  color: #b23a2a;
+  background: rgba(178, 58, 42, 0.08);
 }
 .hero-firm-row {
   position: relative;
@@ -68,12 +69,12 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 2px solid rgba(201, 168, 76, 0.4);
+  border: 2px solid rgba(154, 116, 32, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(201, 168, 76, 0.05);
-  box-shadow: 0 0 30px rgba(201, 168, 76, 0.12);
+  background: rgba(154, 116, 32, 0.06);
+  box-shadow: 0 0 30px rgba(154, 116, 32, 0.14);
   animation: pulse-seal 3s ease-in-out infinite;
 }
 .seal-logo {
@@ -86,10 +87,10 @@
 @keyframes pulse-seal {
   0%,
   100% {
-    box-shadow: 0 0 30px rgba(201, 168, 76, 0.12);
+    box-shadow: 0 0 30px rgba(154, 116, 32, 0.14);
   }
   50% {
-    box-shadow: 0 0 50px rgba(201, 168, 76, 0.25);
+    box-shadow: 0 0 50px rgba(154, 116, 32, 0.28);
   }
 }
 .hero-title {
@@ -107,7 +108,7 @@
   font-weight: 600;
   line-height: 1;
   letter-spacing: 4px;
-  background: linear-gradient(135deg, #fff 30%, #c9a84c 100%);
+  background: linear-gradient(135deg, #1b1e27 30%, #9a7420 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -117,7 +118,7 @@
   font-size: clamp(12px, 2vw, 16px);
   letter-spacing: 6px;
   text-transform: uppercase;
-  color: rgba(201, 168, 76, 0.8);
+  color: rgba(154, 116, 32, 0.85);
   font-weight: 400;
 }
 .hero-desc {
@@ -126,7 +127,7 @@
   max-width: 640px;
   font-size: 16px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(27, 30, 39, 0.68);
   margin-bottom: 48px;
 }
 .hero-stats {
@@ -134,12 +135,13 @@
   gap: 0;
   position: relative;
   z-index: 1;
-  border: 1px solid rgba(201, 168, 76, 0.18);
+  border: 1px solid rgba(154, 116, 32, 0.22);
+  background: #fff;
   margin-bottom: 48px;
 }
 .hero-stat {
   padding: 24px 36px;
-  border-right: 1px solid rgba(201, 168, 76, 0.18);
+  border-right: 1px solid rgba(154, 116, 32, 0.22);
   text-align: center;
 }
 .hero-stat:last-child {
@@ -149,14 +151,14 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 40px;
   font-weight: 600;
-  color: #c9a84c;
+  color: #9a7420;
   line-height: 1;
 }
 .hero-stat-lbl {
   font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(27, 30, 39, 0.5);
   margin-top: 6px;
 }
 .hero-actions {

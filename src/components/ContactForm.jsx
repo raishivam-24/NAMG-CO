@@ -1,11 +1,31 @@
 import { useState } from "react";
 import { T } from "../theme";
+import { WHATSAPP_NUMBER } from "../data/siteData";
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", msg: "" });
   const [sent, setSent] = useState(false);
 
   const update = (k, v) => setForm((p) => ({ ...p, [k]: v }));
+
+  const buildWhatsAppText = () => {
+    const lines = [
+      `Hello NAMG & Co., I'd like to enquire about your services.`,
+      `Name: ${form.name || "-"}`,
+      form.email ? `Email: ${form.email}` : null,
+      form.phone ? `Phone: ${form.phone}` : null,
+      form.service ? `Service required: ${form.service}` : null,
+      form.msg ? `Message: ${form.msg}` : null,
+    ].filter(Boolean);
+    return lines.join("\n");
+  };
+
+  const sendOnWhatsApp = () => {
+    if (!form.name) return;
+    const text = encodeURIComponent(buildWhatsAppText());
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank", "noopener,noreferrer");
+    setSent(true);
+  };
 
   const submit = () => {
     if (!form.name || !form.email) return;
@@ -17,9 +37,11 @@ export default function ContactForm() {
       <div className="form-success">
         <div className="form-success-icon">✓</div>
         <h3 style={{ color: T.gold, fontFamily: "'Cormorant Garamond',serif", fontSize: 26 }}>
-          Message Received
+          Message Sent
         </h3>
-        <p style={{ color: T.muted, marginTop: 10 }}>Our team will get back to you shortly.</p>
+        <p style={{ color: T.muted, marginTop: 10 }}>
+          Our team will get back to you shortly. If WhatsApp didn't open automatically, tap the button below again.
+        </p>
       </div>
     );
 
@@ -36,7 +58,7 @@ export default function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label className="form-label">Email *</label>
+          <label className="form-label">Email</label>
           <input
             className="form-input"
             placeholder="email@example.com"
@@ -78,9 +100,16 @@ export default function ContactForm() {
           onChange={(e) => update("msg", e.target.value)}
         />
       </div>
-      <button className="btn-primary" style={{ width: "100%", marginTop: 4 }} onClick={submit}>
-        Send Enquiry →
-      </button>
+
+      <div className="form-actions">
+        <button className="btn-whatsapp" onClick={sendOnWhatsApp}>
+          <span aria-hidden="true">💬</span> Send on WhatsApp
+        </button>
+        <button className="btn-primary" onClick={submit}>
+          Send Enquiry →
+        </button>
+      </div>
+      <p className="form-hint">"Send on WhatsApp" opens a chat with your message pre-filled — nothing is sent until you hit send there.</p>
     </div>
   );
 }

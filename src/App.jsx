@@ -11,6 +11,8 @@ import Team from "./components/Team";
 import Offices from "./components/Offices";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Resources from "./components/Resources";
+import WhatsAppFloat from "./components/WhatsAppFloat";
 
 export default function App() {
   const [activeNav, setActiveNav] = useState("Home");
@@ -50,11 +52,15 @@ export default function App() {
 
       <Rera />
 
+      <Resources/>
+
       <Team />
 
       <Offices />
 
       <Contact />
+
+      <WhatsAppFloat />
 
       <Footer scrollTo={scrollTo} />
     </div>

@@ -58,7 +58,7 @@ export default function Footer({ scrollTo }) {
 
         <div className="footer-bottom">
           <div>© 2025 N A M G &amp; Co. All rights reserved.</div>
-          <div style={{ color: T.dim }}>
+          <div style={{ color: T.footerText }}>
             ICAI Reg. No.: 021640C &nbsp;|&nbsp; RBI Empanelled &nbsp;|&nbsp; IBBI Registered Valuer
           </div>
         </div>

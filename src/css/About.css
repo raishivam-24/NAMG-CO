@@ -18,11 +18,11 @@
 }
 .about-tag {
   padding: 6px 16px;
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  border: 1px solid rgba(154, 116, 32, 0.35);
   font-size: 11px;
   letter-spacing: 1px;
-  color: #c9a84c;
-  background: rgba(201, 168, 76, 0.06);
+  color: #9a7420;
+  background: rgba(154, 116, 32, 0.06);
   text-transform: uppercase;
   border-radius: 2px;
 }
@@ -32,13 +32,13 @@
   gap: 20px;
 }
 .why-card {
-  background: #131720;
-  border: 1px solid rgba(201, 168, 76, 0.12);
+  background: #fff;
+  border: 1px solid rgba(154, 116, 32, 0.16);
   padding: 28px 24px;
   transition: border-color 0.3s, transform 0.3s;
 }
 .why-card:hover {
-  border-color: rgba(201, 168, 76, 0.4);
+  border-color: rgba(154, 116, 32, 0.5);
   transform: translateY(-4px);
 }
 .why-icon {
@@ -48,11 +48,11 @@
 .why-title {
   font-size: 15px;
   font-weight: 600;
-  color: #fff;
+  color: #1b1e27;
   margin-bottom: 10px;
 }
 .why-desc {
   font-size: 13px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(27, 30, 39, 0.62);
 }

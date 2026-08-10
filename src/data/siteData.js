@@ -3,7 +3,106 @@
    NAMG & Co. PDF profile
 ═══════════════════════════════════════════ */
 
-export const NAV_LINKS = ["Home", "About", "Services", "RERA", "Team", "Contact"];
+export const NAV_LINKS = ["Home", "About", "Services", "RERA", "Resources", "Team", "Contact"];
+
+/* Primary WhatsApp number for the site (country code + number, no + or spaces) */
+export const WHATSAPP_NUMBER = "919806509694";
+
+/* ── INCOME TAX SLABS — FY 2025-26 / AY 2026-27 (resident individual, below 60) ──
+   New regime figures per Finance Act 2025 (unchanged for FY 2026-27 per Budget 2026).
+   Cess: 4% Health & Education Cess applies on tax + surcharge in both regimes. */
+export const INCOME_TAX_NEW_REGIME = {
+  standardDeduction: 75000,
+  rebateLimit: 1200000, // taxable income up to which 87A rebate applies
+  rebateAmount: 60000,
+  slabs: [
+    { upto: 400000, rate: 0 },
+    { upto: 800000, rate: 5 },
+    { upto: 1200000, rate: 10 },
+    { upto: 1600000, rate: 15 },
+    { upto: 2000000, rate: 20 },
+    { upto: 2400000, rate: 25 },
+    { upto: Infinity, rate: 30 },
+  ],
+};
+
+export const INCOME_TAX_OLD_REGIME = {
+  standardDeduction: 50000,
+  rebateLimit: 500000,
+  rebateAmount: 12500,
+  slabs: [
+    { upto: 250000, rate: 0 },
+    { upto: 500000, rate: 5 },
+    { upto: 1000000, rate: 20 },
+    { upto: Infinity, rate: 30 },
+  ],
+};
+
+/* ── GST RATE SLABS — GST 2.0, effective 22 Sep 2025 ── */
+export const GST_RATE_SLABS = [
+  {
+    rate: "0% (Nil)",
+    desc: "Essentials & exempt goods",
+    examples: "Fresh produce, milk, life-saving drugs, educational materials, individual health & life insurance",
+  },
+  {
+    rate: "5%",
+    desc: "Daily essentials & priority goods",
+    examples: "Packaged food, medicines, agricultural equipment, small cars/two-wheelers (specified), soaps & toiletries",
+  },
+  {
+    rate: "18%",
+    desc: "Standard rate — most goods & services",
+    examples: "Most professional & business services, electronics, appliances, restaurants, general goods",
+  },
+  {
+    rate: "40%",
+    desc: "Luxury & sin goods",
+    examples: "Pan masala, tobacco products, aerated/caffeinated drinks, luxury cars, high-end goods",
+  },
+];
+export const GST_RATE_NOTE =
+  "Simplified to a 3-slab structure (5% / 18% / 40%, plus Nil) after the GST Council's GST 2.0 reform effective 22 Sep 2025; a few niche rates (3% on gems/jewellery, 0.25% on rough diamonds) continue outside this table.";
+
+/* ── RERA CHHATTISGARH — indicative registration fee slabs (₹ per sq.m) ──
+   Source: publicly published CG RERA fee schedule. Confirm exact figures for
+   your project with the firm before relying on them for filing. */
+export const RERA_FEE_RATES = [
+  { key: "residential", label: "Residential / Group Housing", upto1000: 5, above1000: 10 },
+  { key: "commercial", label: "Commercial", upto1000: 20, above1000: 25 },
+  { key: "mixed", label: "Mixed-Use (Residential + Commercial)", upto1000: 10, above1000: 15 },
+  { key: "plotted", label: "Plotted / Layout Development", upto1000: 5, above1000: 5 },
+];
+export const RERA_FEE_CAP = 1000000; // indicative overall cap often applied
+
+/* ── USEFUL LINKS ── */
+export const USEFUL_LINKS = [
+  {
+    title: "Income Tax e-Filing Portal",
+    desc: "File returns, check refund status, download forms & AIS/26AS",
+    url: "https://www.incometax.gov.in",
+  },
+  {
+    title: "GST Portal",
+    desc: "GST registration, return filing, and e-way bill services",
+    url: "https://www.gst.gov.in",
+  },
+  {
+    title: "Chhattisgarh RERA (CG RERA)",
+    desc: "Project registration, complaint filing & registered project search",
+    url: "https://rera.cgstate.gov.in",
+  },
+  {
+    title: "ICAI — Institute of Chartered Accountants of India",
+    desc: "Firm & member verification, standards, and CPE resources",
+    url: "https://www.icai.org",
+  },
+  {
+    title: "MCA — Ministry of Corporate Affairs",
+    desc: "Company/LLP incorporation and statutory filings",
+    url: "https://www.mca.gov.in",
+  },
+];
 
 export const STATS = [
   { num: "95+", lbl: "RERA Projects" },
@@ -143,7 +242,7 @@ export const TEAM = [
       "Specialises in bank audits including statutory branch audits, stock audits, and concurrent audits. Expert in income tax compliance, trust and society registrations, and management consultancy services including MIS development and management audits.",
     email: "aditi@namg.in",
     mobile: "75871-52490",
-    initials: "AA",
+    photo: "/team/aditi-agrawal.jpg",
   },
 ];
 
