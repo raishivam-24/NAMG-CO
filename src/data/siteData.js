@@ -9,12 +9,16 @@ export const NAV_LINKS = ["Home", "About", "Services", "RERA", "Resources", "Tea
 export const WHATSAPP_NUMBER = "919806509694";
 
 /* ── INCOME TAX SLABS — FY 2025-26 / AY 2026-27 (resident individual, below 60) ──
-   New regime figures per Finance Act 2025 (unchanged for FY 2026-27 per Budget 2026).
-   Cess: 4% Health & Education Cess applies on tax + surcharge in both regimes. */
+   New regime figures per Finance Act 2025, unchanged for FY 2026-27 per Union Budget 2026.
+   Cess: 4% Health & Education Cess applies on (tax + surcharge) in both regimes.
+   Surcharge thresholds/rates and marginal-relief mechanics per Income Tax Dept guidance
+   for AY 2026-27 — new regime surcharge is capped at 25% (no 37% slab). */
 export const INCOME_TAX_NEW_REGIME = {
   standardDeduction: 75000,
-  rebateLimit: 1200000, // taxable income up to which 87A rebate applies
+  basicExemption: 400000,
+  rebateLimit: 1200000, // taxable income up to which 87A rebate fully applies
   rebateAmount: 60000,
+  employerNpsPct: 14, // Sec 80CCD(2) cap, % of Basic Salary
   slabs: [
     { upto: 400000, rate: 0 },
     { upto: 800000, rate: 5 },
@@ -24,18 +28,53 @@ export const INCOME_TAX_NEW_REGIME = {
     { upto: 2400000, rate: 25 },
     { upto: Infinity, rate: 30 },
   ],
+  // { upto: threshold, rate } — surcharge rate applicable once taxable income crosses `upto` of the PREVIOUS row
+  surcharge: [
+    { upto: 5000000, rate: 0 },
+    { upto: 10000000, rate: 10 },
+    { upto: 20000000, rate: 15 },
+    { upto: Infinity, rate: 25 },
+  ],
 };
 
 export const INCOME_TAX_OLD_REGIME = {
   standardDeduction: 50000,
+  basicExemption: 250000,
   rebateLimit: 500000,
   rebateAmount: 12500,
+  employerNpsPct: 10, // Sec 80CCD(2) cap, % of Basic Salary
   slabs: [
     { upto: 250000, rate: 0 },
     { upto: 500000, rate: 5 },
     { upto: 1000000, rate: 20 },
     { upto: Infinity, rate: 30 },
   ],
+  surcharge: [
+    { upto: 5000000, rate: 0 },
+    { upto: 10000000, rate: 10 },
+    { upto: 20000000, rate: 15 },
+    { upto: 50000000, rate: 25 },
+    { upto: Infinity, rate: 37 },
+  ],
+};
+
+/* ── CAPITAL GAINS — listed equity / equity mutual funds, per Finance (No. 2) Act 2024,
+   unchanged through FY 2025-26 / FY 2026-27. Section 87A rebate does not apply to these. */
+export const CAPITAL_GAINS = {
+  stcgRate: 20, // Sec 111A — flat, no threshold exemption
+  ltcgRate: 12.5, // Sec 112A
+  ltcgExemption: 125000,
+  surchargeCapPct: 15, // surcharge on 111A/112A gains is capped at 15% regardless of income bracket
+};
+
+/* ── DEDUCTION LIMITS — old regime (except employer NPS, available in both) ── */
+export const DEDUCTION_LIMITS = {
+  section80C: 150000,
+  section80D: 75000, // covers self (25,000) + senior citizen parents (50,000) combined
+  nps80CCD1B: 50000,
+  homeLoanInterest24b: 200000, // self-occupied property
+  hraMetroPct: 50,
+  hraNonMetroPct: 40,
 };
 
 /* ── GST RATE SLABS — GST 2.0, effective 22 Sep 2025 ── */
@@ -64,16 +103,20 @@ export const GST_RATE_SLABS = [
 export const GST_RATE_NOTE =
   "Simplified to a 3-slab structure (5% / 18% / 40%, plus Nil) after the GST Council's GST 2.0 reform effective 22 Sep 2025; a few niche rates (3% on gems/jewellery, 0.25% on rough diamonds) continue outside this table.";
 
-/* ── RERA CHHATTISGARH — indicative registration fee slabs (₹ per sq.m) ──
-   Source: publicly published CG RERA fee schedule. Confirm exact figures for
-   your project with the firm before relying on them for filing. */
+/* ── RERA CHHATTISGARH — registration fee slabs (₹ per sq.m) ──
+   Rates as commonly published for CG RERA (Real Estate (Regulation & Development)
+   Rules, Chhattisgarh, 2017) — group housing/residential and commercial rates split
+   by project area, with an overall cap. Figures are drawn from public secondary
+   sources; confirm the exact figure for your project with us before filing, since
+   CG RERA can revise these from time to time. */
 export const RERA_FEE_RATES = [
-  { key: "residential", label: "Residential / Group Housing", upto1000: 5, above1000: 10 },
+  { key: "residential", label: "Residential / Group Housing", upto1000: 10, above1000: 15 },
   { key: "commercial", label: "Commercial", upto1000: 20, above1000: 25 },
-  { key: "mixed", label: "Mixed-Use (Residential + Commercial)", upto1000: 10, above1000: 15 },
-  { key: "plotted", label: "Plotted / Layout Development", upto1000: 5, above1000: 5 },
+  { key: "mixed", label: "Mixed-Use (Residential + Commercial)", upto1000: 15, above1000: 20 },
+  { key: "plotted", label: "Plotted / Layout Development", upto1000: 5, above1000: 10 },
 ];
-export const RERA_FEE_CAP = 1000000; // indicative overall cap often applied
+export const RERA_FEE_CAP = 1000000; // published overall cap per project
+
 
 /* ── USEFUL LINKS ── */
 export const USEFUL_LINKS = [
@@ -198,6 +241,18 @@ export const RERA_CITIES = ["Raipur", "Bilaspur", "Durg", "Bhilai", "Korba", "Ra
 
 export const TEAM = [
   {
+    name: "CA Ankit Goyal",
+    quals: "FCA, B.Com",
+    mem: "430953",
+    rank: "95+ RERA project registrations",
+    expertise:
+      "Spearheads the firm's RERA practice with over 95 successful project registrations across Chhattisgarh. Expert in statutory audits, bank audits, business setup, and finance syndication. Manages the Bilaspur office and specialises in economic feasibility studies and project report preparation.",
+    email: "ankit@namg.in",
+    mobile: "98065-09694",
+    photo: "/team/ankit-goyal.jpg",
+    linkedin: "https://www.linkedin.com/in/ca-ankit-goyal-80691977/",
+  },
+  {
     name: "CA Nitin Goyal",
     quals: "FCA, CS, CMA, LL.M, IBBI Registered Valuer",
     mem: "432043",
@@ -222,18 +277,6 @@ export const TEAM = [
     linkedin: "https://www.linkedin.com/in/ca-aniket-mahendra-goel-9661925b/",
   },
   {
-    name: "CA Ankit Goyal",
-    quals: "FCA, B.Com",
-    mem: "430953",
-    rank: "95+ RERA project registrations",
-    expertise:
-      "Spearheads the firm's RERA practice with over 95 successful project registrations across Chhattisgarh. Expert in statutory audits, bank audits, business setup, and finance syndication. Manages the Bilaspur office and specialises in economic feasibility studies and project report preparation.",
-    email: "ankit@namg.in",
-    mobile: "98065-09694",
-    photo: "/team/ankit-goyal.jpg",
-    linkedin: "https://www.linkedin.com/in/ca-ankit-goyal-80691977/",
-  },
-  {
     name: "CA Aditi Agrawal",
     quals: "ACA, B.Com",
     mem: "460703",
@@ -250,10 +293,10 @@ export const OFFICES = [
   {
     city: "Raipur",
     offices: [
-      {
-        addr: "Samta Colony - 205, 2nd Floor, Samta Shopping Arcade, Samta Colony, Raipur (Chhattisgarh) - 492001",
-        ph: "+91 87701 32482",
-      },
+      // {
+      //   addr: "Samta Colony - 205, 2nd Floor, Samta Shopping Arcade, Samta Colony, Raipur (Chhattisgarh) - 492001",
+      //   ph: "+91 87701 32482",
+      // },
       {
         addr: "Currency Tower: 4058 & 4059, 4th Floor, Currency Tower, VIP Chowk, Raipur - 492001",
         ph: "+91 90211 85551",

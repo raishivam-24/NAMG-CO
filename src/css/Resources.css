@@ -196,3 +196,139 @@
   color: #9a7420;
   letter-spacing: 0.3px;
 }
+
+/* ── Professional Tax Calculator ── */
+.tc-section-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  color: #1b1e27;
+  margin: 32px 0 16px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(154, 116, 32, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.tc-section-title:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.tc-inline-toggle {
+  width: auto;
+}
+.tc-fields {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (max-width: 700px) {
+  .tc-fields {
+    grid-template-columns: 1fr;
+  }
+}
+.tc-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 8px;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #9a7420;
+  background: rgba(154, 116, 32, 0.1);
+  border-radius: 2px;
+  font-weight: 700;
+}
+
+.tc-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .tc-compare {
+    grid-template-columns: 1fr;
+  }
+}
+.tc-compare-card {
+  background: #f6f3ea;
+  border: 1px solid rgba(154, 116, 32, 0.2);
+  padding: 22px 24px;
+  text-align: center;
+}
+.tc-compare-card--win {
+  background: linear-gradient(135deg, #fff, #f2ecd9);
+  border-color: #9a7420;
+  box-shadow: 0 0 24px rgba(154, 116, 32, 0.1);
+}
+.tc-compare-label {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(27, 30, 39, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.tc-badge {
+  padding: 2px 8px;
+  font-size: 9px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: #9a7420;
+  color: #fff;
+  border-radius: 2px;
+  font-weight: 700;
+}
+.tc-compare-amt {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  color: #1b1e27;
+  margin-top: 8px;
+}
+.tc-compare-sub {
+  font-size: 12px;
+  color: rgba(27, 30, 39, 0.5);
+  margin-top: 4px;
+}
+
+.tc-monthly {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6f3ea;
+  border: 1px solid rgba(154, 116, 32, 0.2);
+  padding: 16px 22px;
+  margin-top: 4px;
+  font-size: 13px;
+  color: rgba(27, 30, 39, 0.65);
+}
+.tc-monthly strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  color: #9a7420;
+}
+
+.tc-suggestions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tc-suggestions li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(27, 30, 39, 0.68);
+}
+.tc-suggestions li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #9a7420;
+  font-weight: 700;
+}
