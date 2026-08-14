@@ -293,10 +293,10 @@ export const OFFICES = [
   {
     city: "Raipur",
     offices: [
-      // {
-      //   addr: "Samta Colony - 205, 2nd Floor, Samta Shopping Arcade, Samta Colony, Raipur (Chhattisgarh) - 492001",
-      //   ph: "+91 87701 32482",
-      // },
+      {
+        addr: "Samta Colony - 205, 2nd Floor, Samta Shopping Arcade, Samta Colony, Raipur (Chhattisgarh) - 492001",
+        ph: "+91 87701 32482",
+      },
       {
         addr: "Currency Tower: 4058 & 4059, 4th Floor, Currency Tower, VIP Chowk, Raipur - 492001",
         ph: "+91 90211 85551",

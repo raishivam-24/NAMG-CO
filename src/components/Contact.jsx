@@ -41,13 +41,13 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
-              {/* <div className="contact-info-item">
+              <div className="contact-info-item">
                 <span className="contact-info-icon">🏢</span>
                 <div>
                   <div className="contact-info-label">Headquarters</div>
                   <div className="contact-info-val">Samta Colony, Raipur, CG – 492001</div>
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
 
