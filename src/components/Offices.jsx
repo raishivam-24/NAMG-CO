@@ -22,6 +22,7 @@ export default function Offices() {
                 <a key={i} href={"https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(off.addr)} target="_blank" rel="noopener noreferrer" className="office-card">
                   <div className="office-icon">📍</div>
                   <div>
+                    <div className="office-title">{off.title}</div>
                     <div className="office-addr">{off.addr}</div>
                     <span className="office-ph" onClick={(e) => e.stopPropagation()}>
                       <a href={`tel:${off.ph}`} className="office-ph-link">

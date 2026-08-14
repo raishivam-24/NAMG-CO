@@ -39,6 +39,12 @@
   flex-shrink: 0;
   margin-top: 2px;
 }
+.office-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b1e27;
+  margin-bottom: 4px;
+} 
 .office-addr {
   font-size: 13px;
   color: rgba(27, 30, 39, 0.75);

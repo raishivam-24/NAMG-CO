@@ -294,6 +294,7 @@ export const OFFICES = [
     city: "Raipur",
     offices: [
       {
+        title: "Head Office",
         addr: "Samta Colony - 205, 2nd Floor, Samta Shopping Arcade, Samta Colony, Raipur (Chhattisgarh) - 492001",
         ph: "+91 87701 32482",
       },
